@@ -1,0 +1,33 @@
+* {
+    margin: 0 auto;
+}
+.name {
+    color: darkslategrey;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.scheduleTable {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lesson {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    flex-direction: row;
+    gap: 5px;
+    padding: 10px;
+    border: 1px solid rgb(165, 167, 167);
+    width: 700px;
+}
+
+.lesson_title {
+    width: 110px;
+}
+
