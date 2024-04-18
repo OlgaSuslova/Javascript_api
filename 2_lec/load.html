@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .loader .fa-spinner {
+            font-size: 48px;
+            color: #333;
+            animation: spin 1s linear infinite;
+        }
+        .hidden {
+            display: none;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            } 
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="loader">
+        <i class="fa-thin fa-check"></i>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg> -->
+    </div>
+
+    <div class="content hidden">
+        <h1>Заголовок</h1>
+        <p>Содердимое страницы</p>
+        <img src="./4996-koshka-16.jpg" alt="cat">
+    </div>
+
+    <script>
+        window.addEventListener('load', function (e) {
+            const contentEl = document.querySelector('.content');
+            contentEl.classList.remove('hidden');
+
+            const loaderEL = document.querySelector('.loader');
+            contentEl.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

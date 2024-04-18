@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal {
+        display: none;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid black;
+      }
+
+      .active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn btn-primary">Open modal</button>
+    <div class="modal">
+        <h3 class="modal-title">Modal Title</h3>
+        <button class="close" type="button">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

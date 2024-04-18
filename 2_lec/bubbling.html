@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        li:hover {
+            background-color: #f0f0f0ff;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <p>
+            <span style="background: red;">
+            Click me! it's span</span>
+        </p>
+    </div>
+
+    <ul id="list">
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+    </ul>
+
+    <script>
+        for (const element of document.querySelectorAll('*')) {
+            //всплытие
+            element.addEventListener('click', function (e) {
+                console.log(`Погружение ${element.tagName}`);
+            });
+            //погружение
+            element.addEventListener('click', function (e) {
+                console.log(`Всплытие ${element.tagName}`);
+            });
+        }
+
+        const list = document.getElementById('list');
+        list.addEventListener('click', function (e) {
+            console.log(this);
+            if (e.target.tagName === 'LI') {
+                console.log(`Вы нажали на ${e.target.textContent}`);
+            }
+        });
+    </script>
+</body>
+</html>

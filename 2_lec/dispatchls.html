@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">нажми меня</button>
+    <script>
+        const button = document.querySelector('#btn');
+
+        button.addEventListener('click', (event) => {
+            if (event.isTrusted) {
+                console.log('клик событие является доверенным');
+            } else {
+                console.log('клик событие ne является доверенным');
+            }
+        });
+
+        function simulateClick () {
+            const clickEvent = new Event('click', { bubbles: true} ); //bubbles это всплытие
+            button.dispatchEvent(clickEvent);
+        }
+
+        setTimeout(simulateClick, 2000);
+    </script>
+</body>
+</html>
