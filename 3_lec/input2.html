@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Форма комментария</h1>
+    <textarea id="comment-input" cols="50" rows="4"></textarea>
+    <p>Количество символов: <SPAN id="char-count">0</SPAN></p>
+
+    <script>
+        const commentInput = document.querySelector('#comment-input');
+        const charCountElement = document.querySelector('#char-count');
+
+        commentInput.addEventListener('input', upDateCharCount);
+        commentInput.addEventListener('cut', upDateCharCount);
+        commentInput.addEventListener('copy', upDateCharCount);
+
+        function upDateCharCount () {
+            setTimeout(() => {
+                const comment = commentInput.value;
+                const charCount = comment.length;
+
+                charCountElement.textContent = commentInput.value.length;
+            }, 0);
+        }
+    </script>
+</body>
+</html>
