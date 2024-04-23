@@ -1,0 +1,34 @@
+* {
+    margin: 0 auto;
+}
+img {
+    max-width: 400px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photo_like, .photo_previous {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+.photo_like:hover, .photo_previous:hover {
+    background-color: white;
+    color: #000000;
+}
+
+.photo_like-counter {
+    font-size: 20px;
+    font-weight: bold;
+}
